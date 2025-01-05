@@ -58,6 +58,9 @@ const paymentController = async (request, response) => {
           },
         ],
         customer_email: user.email,
+        metadata : {
+          userId : user.userId
+        },
         line_items: cartItems.map((item) => ({
           price_data: {
             currency: 'inr',
